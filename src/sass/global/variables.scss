@@ -1,0 +1,144 @@
+// container Width  
+$container_width : 1190px;
+
+
+// Color Pallete
+$black : #1d1d1b;
+$white : #ffffff;
+$border : #3C3C3A;
+$gray : #939393;
+$background : #f0f0f0;
+$blue : #1d92c6;
+
+// Fonts
+@font-face {
+  font-family: 'Neue Haas Grotesk Text';
+  src: url('/assets/fonts/NHaasGroteskDSPro-45Lt.otf');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE;
+}
+
+$font_family: 'Neue Haas Grotesk Text, Open Sans';
+
+// font-weights 
+$light : 300;
+$regular : 400;
+$medium : 500;
+$semiBold : 600;
+$bold : 700;
+
+// Sizes
+$header: 30px;
+$large: 28px;
+$big : 24px;
+$medium : 18px;
+$normal: 16px;
+$small: 15px;
+
+
+/* MIXIN : MEDIA QUERIES
+ *    EX : @include mq( 'lap-and-up' ) { CODE }
+ * ------------------------------------------------------------------------- */
+$phone: "screen and (max-width: 767px)";
+$phone-tablet-portrait: "screen and (max-width: 959px)";
+$tablet: "screen and (min-width: 768px) and (max-width: 1024px)";
+$phone-and-tablet: "screen and (max-width: 1024px)";
+$tablet-and-up: "screen and (min-width: 768px)";
+$tablet-portrait: "screen and (min-width: 768px) and (max-width: 959px)";
+$tablet-landscape: "screen and (min-width: 960px) and (max-width: 1024px)";
+$lap: "screen and (min-width: 1025px) and (max-width: 1219px)";
+$lap-and-up: "screen and (min-width: 1025px)";
+$desk-and-up: "screen and (min-width: 1220px)";
+$lap-and-desk: "screen and (min-width: 1025px) and (max-width: 1679px)";
+$wide-and-up: "screen and (min-width: 1680px)";
+$retina: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi)";
+$small-screen: "screen and (max-width: 375px)";
+$iphone4: "screen and (max-width: 320px)";
+
+@mixin mq($alias) {
+  @if $alias=="phone" {
+    @media #{$phone} {
+      @content;
+    }
+  }
+  @if $alias=="phone-tablet-portrait" {
+    @media #{$phone-tablet-portrait} {
+      @content;
+    }
+  }
+
+
+  @else if $alias=="tablet" {
+    @media #{$tablet} {
+      @content;
+    }
+  }
+
+  @else if $alias=="phone-and-tablet" {
+    @media #{$phone-and-tablet} {
+      @content;
+    }
+  }
+
+  @else if $alias=="tablet-and-up" {
+    @media #{$tablet-and-up} {
+      @content;
+    }
+  }
+
+  @else if $alias=="tablet-portrait" {
+    @media #{$tablet-portrait} {
+      @content;
+    }
+  }
+
+  @else if $alias=="tablet-landscape" {
+    @media #{$tablet-landscape} {
+      @content;
+    }
+  }
+
+  @else if $alias=="lap" {
+    @media #{$lap} {
+      @content;
+    }
+  }
+
+  @else if $alias=="lap-and-up" {
+    @media #{$lap-and-up} {
+      @content;
+    }
+  }
+
+  @else if $alias=="desk-and-up" {
+    @media #{$desk-and-up} {
+      @content;
+    }
+  }
+
+  @else if $alias=="lap-and-desk" {
+    @media #{$lap-and-desk} {
+      @content;
+    }
+  }
+
+  @else if $alias=="wide-and-up" {
+    @media #{$wide-and-up} {
+      @content;
+    }
+  }
+
+  @else if $alias=="retina" {
+    @media #{$retina} {
+      @content;
+    }
+  }
+
+  @if $alias=="small-screen" {
+    @media #{$small-screen} {
+      @content;
+    }
+  }
+}

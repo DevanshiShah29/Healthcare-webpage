@@ -1,0 +1,74 @@
+footer {
+    background: $black;
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden;
+
+    @include mq('phone') {
+        padding: 50px 0;
+    }
+
+    .square-shapes {
+        object-fit: contain;
+        margin: 0 auto;
+        position: absolute;
+        height: 285px;
+        left: 50%;
+        top: 0%;
+        @include transform(translate(-50%, -50%));
+    }
+
+
+    .icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+
+        img {
+            height: 40px;
+            width: 40px;
+        }
+
+    }
+
+    .text {
+        font-size: $big;
+        font-weight: $bold;
+        color: $white;
+        display: inline-block;
+
+        a {
+            color: $white;
+
+        }
+
+        @include mq('phone') {
+            margin: 0px 0 20px;
+            line-height: 36px;
+        }
+    }
+
+    .row {
+        border-bottom: 1px solid #5a5a5a;
+        padding: 50px 0;
+    }
+
+    .link {
+        color: $white;
+        font-size: $normal;
+        text-align: center;
+        display: inline-block;
+        margin-right: 20px;
+        padding: 40px 0;
+
+        &.note {
+            color: $gray;
+        }
+
+        @include mq('phone') {
+            width: 100%;
+            padding: 10px 0;
+
+        }
+    }
+}

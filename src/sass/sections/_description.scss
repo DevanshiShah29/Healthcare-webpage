@@ -1,0 +1,91 @@
+#description-wrapper {
+    padding: 315px 0 290px;
+
+    @include mq('phone-tablet-portrait') {
+        padding: 75px 0;
+    }
+
+    @include mq('tablet-landscape') {
+        padding: 315px 0 180px;
+    }
+
+    .title {
+        margin: 0 auto;
+        text-align: center;
+        line-height: 36px;
+        max-width: 867px;
+    }
+
+    .button {
+        width: 175px;
+        margin: 20px auto;
+    }
+
+    .card {
+        background: $white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 40px 50px 20px;
+        margin-bottom: 110px;
+        position: absolute;
+        bottom: 13px;
+        z-index: 3;
+
+        @include mq('phone-tablet-portrait') {
+            position: static;
+            padding: 40px 20px;
+        }
+
+        .icon {
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .title-warp {
+            display: inline-block;
+            padding-left: 20px;
+
+            .title {
+                font-size: $large;
+                font-weight: $bold;
+                text-align: left;
+            }
+
+            .subtitle {
+                font-size: $big;
+                font-weight: $light;
+            }
+        }
+
+        .content {
+            font-size: $normal;
+            padding: 20px 0 0;
+            line-height: 30px;
+        }
+
+        &.card-wrap-one {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            margin-left: 100px;
+
+            @include mq('phone-tablet-portrait') {
+                margin-left: 0px;
+                border-radius: 30px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &.card-wrap-two {
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            margin-right: 100px;
+
+            @include mq('phone-tablet-portrait') {
+                margin-right: 0px;
+                border-radius: 30px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

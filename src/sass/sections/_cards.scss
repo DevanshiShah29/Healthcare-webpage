@@ -1,0 +1,208 @@
+#successen {
+    background: $black;
+    padding: 185px 0 120px;
+    position: relative;
+
+    @include mq('phone-tablet-portrait') {
+        padding: 50px 0;
+    }
+
+    @include mq('tablet-landscape') {
+        padding: 80px 0 100px;
+    }
+
+    .video-container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+
+        @include mq('phone-tablet-portrait') {
+            position: static;
+            @include transform(translate(0%, 0%));
+            margin: 0 15px;
+        }
+
+        .play-video {
+            position: relative;
+            background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+
+            .cardImage {
+                position: relative;
+                z-index: -1;
+
+                @include mq('phone-tablet-portrait') {
+                    object-fit: cover;
+                    height: 400px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .title {
+            position: absolute;
+            left: 74%;
+            top: 50%;
+            @include transform(translate(-50%, -50%));
+            color: $white;
+            font-size: $big;
+
+            @include mq('phone-tablet-portrait') {
+                left: 0;
+                top: 65%;
+                @include transform(translate(0%, 0%));
+                padding: 15px;
+            }
+        }
+
+
+        .btn-play-video {
+            background: url('../../assets/images/playButton.png');
+            height: 140px;
+            width: 125px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            @include transform(translate(-50%, -50%));
+            background-color: Transparent;
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+
+    .section-header {
+        padding: 125px 0 30px;
+
+        @include mq('phone') {
+            padding: 50px 0;
+        }
+
+        .title {
+            float: left;
+            color: $white;
+            font-weight: $medium;
+            font-size: $big;
+
+            @include mq('phone') {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            span {
+                font-weight: $bold;
+            }
+        }
+
+        .button {
+            float: right;
+
+            @include mq('phone') {
+                float: none;
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .link {
+                color: $white;
+                font-weight: $bold;
+                font-size: $small;
+                padding: 20px 0;
+                position: relative;
+
+                img {
+                    width: 25px;
+                    position: absolute;
+                    height: 25px;
+                    top: 16px;
+                    left: -35px;
+                }
+            }
+
+            &:hover {
+                .link {
+                    img {
+                        left: -30px;
+                        @include transition(0.5s all ease-in-out);
+                    }
+                }
+            }
+        }
+    }
+
+    .card {
+        background: $black;
+        @include radius(30px);
+        position: relative;
+        height: 350px;
+        border: 1px solid $border;
+        padding: 20px 30px;
+
+        @include mq('phone') {
+            margin: 0px 0 20px;
+        }
+
+        @include mq('phone-tablet-portrait') {
+            padding: 15px;
+        }
+
+        .content {
+            position: absolute;
+            bottom: 38px;
+            left: 38px;
+
+            .title {
+                color: $white;
+                font-weight: $semiBold;
+                font-size: $big;
+            }
+
+            .description {
+                color: $white;
+                font-weight: $medium;
+                font-size: $small;
+            }
+        }
+
+        &.card-1 {
+            background-image: linear-gradient(to bottom,
+                    transparent,
+                    rgba(0, 0, 0, 0.9)),
+                url("../../assets/images/Laag 6.png");
+        }
+
+        &.card-2 {
+            background-image: linear-gradient(to bottom,
+                    transparent,
+                    rgba(0, 0, 0, 0.9)),
+                url("../../assets/images/Laag 8.png");
+        }
+
+        .quote-img {
+            height: 25px;
+            width: 25px;
+            margin: 20px 0;
+        }
+
+        .quote-content {
+            .testimonial {
+                color: $white;
+                font-weight: $semiBold;
+                font-size: $medium;
+                line-height: 25px;
+            }
+
+            .meta-info {
+                color: $gray;
+                font-family: $font_family;
+                font-weight: $medium;
+                font-size: $small;
+                padding-top: 25px;
+            }
+        }
+    }
+}

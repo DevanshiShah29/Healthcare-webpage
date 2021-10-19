@@ -1,0 +1,64 @@
+#hero-section {
+    position: relative;
+    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+
+    .hero-image {
+        position: relative;
+        height: 689px;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .title {
+        font-size: $header;
+        position: absolute;
+        top: 50%;
+        @include transform(translate(-50%, -50%));
+        color: $white;
+        left: 70%;
+        max-width: 432px;
+
+        @include mq('phone-tablet-portrait') {
+            left: 0%;
+            top: auto;
+            bottom: 10%;
+            @include transform(translate(0%, 0%));
+            padding: 15px;
+        }
+    }
+
+    .btn-play-video {
+        background: url('../../assets/images/playButton.png');
+        height: 135px;
+        width: 125px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        @include transform(translate(-50%, -50%));
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        z-index: 3;
+    }
+
+    .line {
+        background: url('../../assets/images/line.png');
+        height: 1073px;
+        width: 963px;
+        position: absolute;
+        top: -15%;
+        left: 50%;
+        @include transform(translate(0%, 0%));
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        z-index: 2;
+
+        @include mq('phone-and-tablet') {
+            display: none;
+        }
+    }
+}

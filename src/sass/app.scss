@@ -1,0 +1,16 @@
+//Global files
+@import "./global/variables.scss";
+@import "./global/grid";
+@import "./global/mixins";
+@import "./global/reset";
+@import "./global/common";
+
+
+//Sections
+@import "./sections/footer";
+@import "./sections/header";
+@import "./sections/cards";
+@import "./sections/logos";
+@import "./sections/form";
+@import "./sections/description";
+@import "./sections/hero";

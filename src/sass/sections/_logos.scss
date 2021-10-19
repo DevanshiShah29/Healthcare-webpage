@@ -1,0 +1,23 @@
+#logo-container {
+    padding: 100px 0;
+
+    .logos {
+        @include flexbox;
+        flex-wrap: wrap;
+
+        @include mq('phone') {
+            display: block;
+        }
+
+        img {
+            height: 110px;
+            width: 147px;
+            object-fit: contain;
+            padding: 26px;
+
+            @include mq('phone') {
+                margin: 0 auto;
+            }
+        }
+    }
+}
